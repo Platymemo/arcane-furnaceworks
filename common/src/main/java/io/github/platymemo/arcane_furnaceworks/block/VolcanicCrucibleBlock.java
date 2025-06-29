@@ -4,7 +4,6 @@ import com.mojang.serialization.MapCodec;
 import io.github.platymemo.arcane_furnaceworks.Constants;
 import io.github.platymemo.arcane_furnaceworks.block.blockentity.VolcanicCrucibleBlockEntity;
 import io.github.platymemo.arcane_furnaceworks.platform.Services;
-import io.github.platymemo.arcane_furnaceworks.stats.ArcaneFurnaceworksStats;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -45,11 +44,11 @@ public class VolcanicCrucibleBlock extends AbstractFurnaceBlock {
 
     protected void openContainer(Level level, @NotNull BlockPos pos, @NotNull Player player) {
         BlockEntity blockentity = level.getBlockEntity(pos);
+
         if (blockentity instanceof VolcanicCrucibleBlockEntity) {
             player.openMenu((MenuProvider) blockentity);
-            player.awardStat(ArcaneFurnaceworksStats.INTERACT_WITH_VOLCANIC_CRUCIBLE);
+            player.awardStat(Constants.FurnaceType.VOLCANIC_CORE.getInteractionStat());
         }
-
     }
 
     public void animateTick(BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull RandomSource source) {

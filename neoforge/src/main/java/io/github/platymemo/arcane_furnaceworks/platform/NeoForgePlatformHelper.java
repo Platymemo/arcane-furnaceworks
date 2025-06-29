@@ -1,6 +1,7 @@
 package io.github.platymemo.arcane_furnaceworks.platform;
 
 import io.github.platymemo.arcane_furnaceworks.Constants;
+import io.github.platymemo.arcane_furnaceworks.block.ArcaneFurnaceworksBlocks;
 import io.github.platymemo.arcane_furnaceworks.menu.ArcaneFurnaceworksMenus;
 import io.github.platymemo.arcane_furnaceworks.platform.services.IPlatformHelper;
 import net.minecraft.world.inventory.AbstractFurnaceMenu;
@@ -34,22 +35,22 @@ public class NeoForgePlatformHelper implements IPlatformHelper {
     public MenuType<? extends AbstractFurnaceMenu> getMenuType(Constants.FurnaceType furnaceType) {
         return switch (furnaceType) {
             case VOLCANIC_CORE -> ArcaneFurnaceworksMenus.VOLCANIC_CRUCIBLE.value();
-            case FIRE_BREATHER -> null;
-            case LIGHTNING_FURNACE -> null;
-            case FURNACE_OF_THE_MOUNTAIN_KING -> null;
-            case CLOCKWORK_FURNACE -> null;
-            case CALCIFER -> null;
-            case TOASTER -> null;
-            case SOLAR_TOWER -> null;
-            case INFERNAL_ALTAR -> null;
-            case HEART_FURNACE -> null;
+            case FIRE_BREATHER -> throw new NotImplementedException();
+            case LIGHTNING_FURNACE -> throw new NotImplementedException();
+            case FURNACE_OF_THE_MOUNTAIN_KING -> throw new NotImplementedException();
+            case CLOCKWORK_FURNACE -> throw new NotImplementedException();
+            case CALCIFER -> throw new NotImplementedException();
+            case TOASTER -> throw new NotImplementedException();
+            case SOLAR_TOWER -> throw new NotImplementedException();
+            case INFERNAL_ALTAR -> throw new NotImplementedException();
+            case HEART_FURNACE -> throw new NotImplementedException();
         };
     }
 
     @Override
     public BlockEntityType<? extends AbstractFurnaceBlockEntity> getBlockEntityType(Constants.FurnaceType furnaceType) {
         return switch (furnaceType) {
-            case VOLCANIC_CORE -> throw new NotImplementedException();
+            case VOLCANIC_CORE -> ArcaneFurnaceworksBlocks.VOLCANIC_CRUCIBLE_BLOCK_ENTITY_TYPE.value();
             case FIRE_BREATHER -> throw new NotImplementedException();
             case LIGHTNING_FURNACE -> throw new NotImplementedException();
             case FURNACE_OF_THE_MOUNTAIN_KING -> throw new NotImplementedException();

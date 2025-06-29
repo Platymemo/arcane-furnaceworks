@@ -16,7 +16,7 @@ import java.util.List;
 public class VolcanicCrucibleScreen extends AbstractFurnaceScreen<VolcanicCrucibleMenu> {
     private static final ResourceLocation LIT_PROGRESS_SPRITE = ResourceLocation.withDefaultNamespace("container/blast_furnace/lit_progress");
     private static final ResourceLocation BURN_PROGRESS_SPRITE = ResourceLocation.withDefaultNamespace("container/blast_furnace/burn_progress");
-    private static final ResourceLocation TEXTURE = Constants.id("assets/textures/gui/container/volcanic_crucible.png");
+    private static final ResourceLocation TEXTURE = Constants.id("textures/gui/container/volcanic_crucible.png");
     private static final Component FILTER_NAME = Component.translatable("gui.recipebook.toggleRecipes.blastable");
     private static final List<RecipeBookComponent.TabInfo> TABS;
 
