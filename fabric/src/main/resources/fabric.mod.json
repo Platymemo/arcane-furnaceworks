@@ -16,7 +16,10 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "com.example.examplemod.ExampleMod"
+            "io.github.platymemo.arcane_furnaceworks.ArcaneFurnaceworks"
+        ],
+        "client": [
+            "io.github.platymemo.arcane_furnaceworks.ArcaneFurnaceworksClient"
         ]
     },
     "mixins": [
@@ -33,4 +36,3 @@
         "another-mod": "*"
     }
 }
-  
